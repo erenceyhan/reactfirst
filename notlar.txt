@@ -1,0 +1,33 @@
+proje açmak için sırayla yapılacaklar
+	1-npm create vite@latest
+	2-enter ile girip react seçip oradan javascript + swc seçiyoruz
+    3-vite-project diye bir klasör oluşturuyor oradan taşıyoruz
+	4-npm i
+	5-npm run dev > başlatmak için
+    6- npm install @mui/material @emotion/react @emotion/styled
+     - npm install react-router-dom
+     - npm install react-toastify
+
+    7- App.jsx içeriği tam olarka böyle olmalı: 
+
+    import { BrowserRouter } from 'react-router-dom'; // route için
+    import { CssBaseline, Grid } from '@mui/material'; //css ayarlarını 0lıyor, sonra altta yaptığımız ayarları ekliyor
+    import Router from './routes';// route gidiyor
+    import { ToastContainer } from 'react-toastify';// altta verdiği uyarı mesajlarını yazması için
+
+    function App() {
+    return (
+        <BrowserRouter>
+        <CssBaseline />
+        <Grid
+            container
+            justifyContent="center"
+            style={{ maxWidth: 1320, margin: '0 auto' }}>
+            <Router />
+            <ToastContainer position="bottom-right" />
+        </Grid>
+        </BrowserRouter>
+    );
+    }
+
+    export default App;
